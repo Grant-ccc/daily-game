@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+# 🎮 My Everyday GAME - 个人游戏展柜
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+这是一个基于 **React + Vite + TypeScript** 开发的响应式网页，用于展示我日常喜爱的国产恋爱/律政手游收藏。
 
-Currently, two official plugins are available:
+## 🌟 项目亮点
+* **精选收藏**：收录了《恋与制作人》、《未定事件簿》及《恋与深空》等热门作品。
+* **响应式设计**：使用 CSS Flexbox 布局，适配不同屏幕尺寸。
+* **自动化部署**：通过 `gh-pages` 实现了代码变更后的快速在线更新。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ 技术栈
+* **框架**: React 18
+* **构建工具**: Vite
+* **语言**: TypeScript (确保了数据流的类型安全)
+* **部署**: GitHub Pages
 
-## React Compiler
+## 🚀 快速开始
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. 克隆项目
+git clone https://github.com/Grant-ccc/daily-game.git
 
-## Expanding the ESLint configuration
+### 2. 安装依赖
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 3. 本地开发
+npm run dev
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 4. 打包部署
+npm run deploy
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 文件结构说明
+* `src/data.ts`: 存储所有游戏的核心数据（标题、公司、描述、链接）。
+* `src/components/`: 包含 `Navbar`（导航栏）和 `Entry`（信息展示卡片）等组件。
+* `src/img/`: 存放游戏精美海报及图标资源。
