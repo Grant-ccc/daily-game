@@ -4,6 +4,9 @@
 
 这是一个基于 **React + Vite + TypeScript** 开发的响应式网页，用于展示我日常喜爱的国产恋爱/律政手游。该练习项目主要是尝试构建一个可维护的应用。本项目核心练习了：**React 数据驱动渲染、TypeScript 类型管理、以及基于 GitHub Pages 的自动化部署流**。
 
+## 项目预览
+https://grant-ccc.github.io/daily-game/
+
 ## 项目练习重点
 * **组件复用**；拆分成Entry和Navbar两个独立组件，在Entry里面通过props将数据传递数据给Entry组件。对于后期增删添改只需要对data.ts文件内部修改，而不用动到App和Entry组件
 * **数据分离**：将数据放入data.js文件里面，数据更集中更清晰更方便修改
